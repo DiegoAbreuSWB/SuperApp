@@ -5,6 +5,7 @@ package maps.superapp;
  */
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,7 +63,7 @@ public class CardViewDataAdapter extends RecyclerView.Adapter<CardViewDataAdapte
 
         public FeddProperties feed;
 
-        public ViewHolder(View itemLayoutView) {
+        public ViewHolder(final View itemLayoutView) {
             super(itemLayoutView);
 
             tvVersionName = (TextView) itemLayoutView
@@ -74,18 +75,23 @@ public class CardViewDataAdapter extends RecyclerView.Adapter<CardViewDataAdapte
                 @Override
                 public void onClick(View v) {
                     //int y=0;
-                    //String x= feed.getTitle();
+                    //int y = v.getId();
+                   // int x= itemLayoutView.getId();
+                    // String z=  feed.getTitle();
+
+                    //Toast.makeText(v.getContext(), "X: " + x, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(v.getContext(), "Y: " + y, Toast.LENGTH_SHORT).show();
                     //if(x.equals('ACOUGUE')) {
                     //  y = 1;
                     // Toast.makeText(v.getContext(), "Y: " + y, Toast.LENGTH_SHORT).show();
                     //}
 
 //                    Toast.makeText(v.getContext(), "Y: " + y, Toast.LENGTH_SHORT).show();
-
-
                     // if(???"ACOUGUE" )) { TA ERRADO ISSO
+
                     Intent intent = new Intent(v.getContext(), ACOUGUE.class);
                     v.getContext().startActivity(intent);
+
                     //Toast.makeText(v.getContext(), "Categoria Clicada Foi: " + feed.getTitle(), Toast.LENGTH_SHORT).show();
                     //}
 
