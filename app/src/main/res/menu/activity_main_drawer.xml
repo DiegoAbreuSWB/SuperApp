@@ -5,31 +5,31 @@
         <item
             android:id="@+id/criarListaId"
             android:icon="@drawable/ic_lista"
-            android:title="Criar Lista" />
-        <item
-            android:id="@+id/ProdutosListaId"
-            android:icon="@drawable/ic_carrinho"
-            android:title="Produtos" />
+            android:title="Minhas Listas" />
+
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:icon="@drawable/ic_carrinho"
+            android:title="Ultimas Compras" />
+        <item
+            android:id="@+id/ProdutosListaId"
+            android:icon="@drawable/ic_pesquisa"
+            android:title="Pesquisar Produtos" />
+
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Configuracoes" />
+
+
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Compartilhar Lista">
         <menu>
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="Enviar para amigos" />
         </menu>
     </item>
 

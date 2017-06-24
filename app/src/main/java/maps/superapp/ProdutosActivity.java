@@ -48,10 +48,12 @@ public class ProdutosActivity extends AppCompatActivity {
         //final String[] versions = {"ACOUGUE ", "PEIXARIA", "BEBIDAS", "COMBUSTIVEIS",
           //      "CONGELADOS", "FRIOS E LATICINIOS", "HIGIENE E BELEZA", "HORTIFRUTI",
             //    "LIMPEZA", "MERCEARIA", "PADARIA E CONFEITARIA"};
-        final String[] versions = {"ACOUGUE ", "PEIXARIA",
+        final String[] versions = {"ACOUGUE ", "PEIXARIA","BEBIDAS","COMBUSTIVEIS","CONGELADOS","FRIOS E LATICINIOS",
+                "HIGIENE E BELEZA","LIMPEZA","MERCEARIA","PADARIA E CONFEITARIA"
               };
 
-        final int[] icons = {R.drawable.ic_acougue, R.drawable.ic_pescado};
+        final int[] icons = {R.drawable.ic_acougue, R.drawable.ic_pescado,R.drawable.bebidas,R.drawable.combustiveis,
+        R.drawable.congelados,R.drawable.frios,R.drawable.higiene,R.drawable.limpeza,R.drawable.mercearia,R.drawable.padaria};
 
 
         os_versions = new ArrayList<FeddProperties>();
