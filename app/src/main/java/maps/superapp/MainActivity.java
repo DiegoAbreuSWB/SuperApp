@@ -41,6 +41,28 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        ///Welcome App
+        findViewById(R.id.btn_play_again).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // We normally won't show the welcome slider again in real app
+                // but this is for testing
+                PrefManager prefManager = new PrefManager(getApplicationContext());
+
+                // make first time launch TRUE
+                prefManager.setFirstTimeLaunch(true);
+
+                startActivity(new Intent(MainActivity.this, WelcomeActivity.class));
+                finish();
+            }
+        });
+
+
+
+
+
+
     }
 
     @Override

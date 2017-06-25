@@ -5,4 +5,30 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Nome do App!</string>
+    <string name="slide_1_desc">A forma mais facil de Fazer sua lista de Compras! Veja Como</string>
+
+    <string name="slide_2_title">Crie sua lista de Compras!</string>
+    <string name="slide_2_desc">É muito facil! Adicione os produtos a sua lista e depois blablabla...</string>
+
+    <string name="slide_3_title">Compare e Economize</string>
+    <string name="slide_3_desc">Selecione o produto desejado e descubra o quanto ele esta custando em outros locais!!</string>
+
+    <string name="slide_4_title">Compartilhe sua Lista!</string>
+    <string name="slide_4_desc">Compartilhe a sua lista de compras com seus amigos e familiares!</string>
+
+    <string name="play_again_desc">Click aqui para voltar a tela de apresentacao do app </string>
+    <string name="play_again">Ver Novamente</string>
+
+
+
+
+
+
 </resources>

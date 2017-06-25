@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ProdutosActivity" />
-        <activity android:name=".ACOUGUE"></activity>
+        <activity android:name=".ACOUGUE" />
+        <activity android:name=".WelcomeActivity"></activity>
     </application>
 
 </manifest>
