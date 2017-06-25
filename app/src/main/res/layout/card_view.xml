@@ -23,7 +23,6 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_toRightOf="@+id/iconId"
-            android:text="Lollipop"
             android:minHeight="55dp"
             android:textColor="@android:color/black"
             android:textSize="24sp" />

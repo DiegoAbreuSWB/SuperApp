@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,21 +19,21 @@ import java.util.ArrayList;
 /**
  * Created by venkataprasad.kukka on 02-01-2015.
  */
-public class CardViewDataAdapter extends RecyclerView.Adapter<CardViewDataAdapter.ViewHolder> {
+public class ItemCard extends RecyclerView.Adapter<ItemCard.ViewHolder> {
 
     private static ArrayList<FeddProperties> dataSet;
 
-    public CardViewDataAdapter(ArrayList<FeddProperties> os_versions) {
+    public ItemCard(ArrayList<FeddProperties> os_versions) {
 
         dataSet = os_versions;
     }
 
 
     @Override
-    public CardViewDataAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public ItemCard.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
 // create a new view
         View itemLayoutView = LayoutInflater.from(viewGroup.getContext()).inflate(
-                R.layout.card_view, null);
+                R.layout.iten_card_view, null);
 
         // create ViewHolder
 
@@ -41,7 +42,7 @@ public class CardViewDataAdapter extends RecyclerView.Adapter<CardViewDataAdapte
     }
 
     @Override
-    public void onBindViewHolder(CardViewDataAdapter.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(ItemCard.ViewHolder viewHolder, int i) {
 
         FeddProperties fp = dataSet.get(i);
 
@@ -60,40 +61,52 @@ public class CardViewDataAdapter extends RecyclerView.Adapter<CardViewDataAdapte
 
         public TextView tvVersionName;
         public ImageView iconView;
-
         public FeddProperties feed;
+        public TextView preco; //**
+        public Button  btn_add;
 
         public ViewHolder(final View itemLayoutView) {
             super(itemLayoutView);
 
             tvVersionName = (TextView) itemLayoutView
                     .findViewById(R.id.tvVersionName);
+
+            preco= (TextView) itemLayoutView.findViewById(R.id.preco);
+            btn_add=(Button) itemLayoutView.findViewById(R.id.btn_add);
+
             iconView = (ImageView) itemLayoutView
                     .findViewById(R.id.iconId);
 
+
+            btn_add.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                   // Intent intent = new Intent(v.getContext(),ItensAcougue.class);
+                    //v.getContext().startActivity(intent);
+                    Toast.makeText(v.getContext(), "preco clicado foi: " + feed.getTitle(), Toast.LENGTH_SHORT).show();
+
+
+                    //Ai comeca a salvar a lista
+                }
+            });
+
+
+
+
+
+
+/*
             itemLayoutView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //int y=0;
-                    //int y = v.getId();
-                   // int x= itemLayoutView.getId();
-                    // String z=  feed.getTitle();
-                    //Toast.makeText(v.getContext(), "X: " + x, Toast.LENGTH_SHORT).show();
-                    //Toast.makeText(v.getContext(), "Y: " + y, Toast.LENGTH_SHORT).show();
-                    //if(x.equals('ACOUGUE')) {
-                    //  y = 1;
-                    // Toast.makeText(v.getContext(), "Y: " + y, Toast.LENGTH_SHORT).show();
-                    //}
-                    //Toast.makeText(v.getContext(), "Y: " + y, Toast.LENGTH_SHORT).show();
-                    // if(???"ACOUGUE" )) { TA ERRADO ISSO
-                    Intent intent = new Intent(v.getContext(),ItensAcougue.class);
+                      Intent intent = new Intent(v.getContext(),ItensAcougue.class);
                     v.getContext().startActivity(intent);
                     //Toast.makeText(v.getContext(), "Categoria Clicada Foi: " + feed.getTitle(), Toast.LENGTH_SHORT).show();
                     //}
 
                 }
             });
-
+*/
 
         }
 
