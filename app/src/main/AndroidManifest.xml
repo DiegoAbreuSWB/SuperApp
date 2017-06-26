@@ -22,7 +22,8 @@
         <activity android:name=".ProdutosActivity" />
         <activity android:name=".ACOUGUE" />
         <activity android:name=".WelcomeActivity" />
-        <activity android:name=".ItensAcougue"></activity>
+        <activity android:name=".ItensAcougue" />
+        <activity android:name=".TodoList"></activity>
     </application>
 
 </manifest>

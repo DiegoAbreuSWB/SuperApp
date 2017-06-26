@@ -15,9 +15,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-/**
- * Created by venkataprasad.kukka on 02-01-2015.
- */
+
 public class CardViewDataAdapter extends RecyclerView.Adapter<CardViewDataAdapter.ViewHolder> {
 
     private static ArrayList<FeddProperties> dataSet;

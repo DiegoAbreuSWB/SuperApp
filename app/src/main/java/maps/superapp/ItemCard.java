@@ -16,9 +16,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-/**
- * Created by venkataprasad.kukka on 02-01-2015.
- */
 public class ItemCard extends RecyclerView.Adapter<ItemCard.ViewHolder> {
 
     private static ArrayList<FeddProperties> dataSet;
@@ -81,10 +78,13 @@ public class ItemCard extends RecyclerView.Adapter<ItemCard.ViewHolder> {
             btn_add.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                   // Intent intent = new Intent(v.getContext(),ItensAcougue.class);
-                    //v.getContext().startActivity(intent);
-                    Toast.makeText(v.getContext(), "preco clicado foi: " + feed.getTitle(), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(v.getContext(),TodoList.class);
+                    intent.putExtra("title", feed.getTitle() );
 
+                    v.getContext().startActivity(intent);
+
+                   // Toast.makeText(v.getContext(), "preco clicado foi: " + feed.getTitle(), Toast.LENGTH_SHORT).show();
+                    //Quero Ibagens ! feed.getThumbnail()
 
                     //Ai comeca a salvar a lista
                 }
