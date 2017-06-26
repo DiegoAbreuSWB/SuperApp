@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,8 +16,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    RecyclerView mRecyclerView;
+    RecyclerView.LayoutManager mLayoutManager;
+    RecyclerView.Adapter mAdapter;
+    ArrayList<String> alName;
+    ArrayList<Integer> alImage;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +70,20 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        //Horizontal
+        alName = new ArrayList<>(Arrays.asList("NAZARE", "FORMOSA","ARMAZEM","BELEM ALIMENTOS","ASSAI","MARKO"));
+        alImage = new ArrayList<>(Arrays.asList(R.drawable.nazare, R.drawable.formosa, R.drawable.armazen,R.drawable.belemlimentos,R.drawable.assai,R.drawable.makro));
 
+        // Calling the RecyclerView
+        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        mRecyclerView.setHasFixedSize(true);
+
+        // The number of Columns
+        mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        mAdapter = new HLVAdapter(MainActivity.this, alName, alImage);
+        mRecyclerView.setAdapter(mAdapter);
 
 
 

@@ -23,7 +23,7 @@
         <activity android:name=".ACOUGUE" />
         <activity android:name=".WelcomeActivity" />
         <activity android:name=".ItensAcougue" />
-        <activity android:name=".TodoList"></activity>
+        <activity android:name=".TodoList" />
     </application>
 
 </manifest>
